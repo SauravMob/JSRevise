@@ -1,0 +1,19 @@
+// Create a polyfill for apply method
+Function.prototype.myApply = function (context = {}, args = []) {
+    if (typeof this !== "function") {
+        throw new Error("Its not applyable");
+    }
+
+    if (!Array.isArray(args)) {
+        throw new Error("Args is not array");
+    }
+    context.fn = this;
+    context.fn(...args)
+}
+
+let obj = {name:"Saurav", age: 42}
+function printDetails(anotherName, anotherAge) {
+    console.log(this.name + " " + this.age + " With " + anotherName + " " + anotherAge);
+}
+
+printDetails.myApply(obj, ["Aman", 12]);
