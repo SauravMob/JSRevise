@@ -3,7 +3,7 @@
 function once(fn, context) {
     let ran;
 
-    return function() {
+    return function () {
         if (fn) {
             ran = fn.apply(context || this, arguments);
             fn = null;
@@ -14,7 +14,7 @@ function once(fn, context) {
 
 const hello = once((a, b) => console.log("Hello", a, b));
 
-hello(1,2)
-hello(1,2)
-hello(1,2)
-hello(1,2)
+hello(1, 2)
+hello(1, 2)
+hello(1, 2)
+hello(1, 2)

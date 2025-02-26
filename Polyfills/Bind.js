@@ -1,5 +1,5 @@
 // Create a polyfill for Bind method
-Function.prototype.myBind = function(context = {}, ...args) {
+Function.prototype.myBind = function (context = {}, ...args) {
     if (typeof this !== "function") {
         throw new Error("Not a function");
     }
@@ -14,6 +14,6 @@ function printDetails(...args) {
     console.log(this.name + " : " + this.age + " : " + args);
 }
 
-const obj = {name :"Saurav", age: "42"}
+const obj = { name: "Saurav", age: "42" }
 const newFunc = printDetails.myBind(obj, 22);
 newFunc(34)

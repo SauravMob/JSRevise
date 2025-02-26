@@ -8,7 +8,7 @@ Array.prototype.myReduce = function (callback, initialVal) {
     return accumulator;
 }
 
-const sumOfArray = [1,2,3,4].myReduce((old, curr) => {
+const sumOfArray = [1, 2, 3, 4].myReduce((old, curr) => {
     return old + curr
 }, 0)
 console.log(sumOfArray)

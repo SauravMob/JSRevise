@@ -8,7 +8,7 @@ Function.prototype.myCall = function (context = {}, ...args) {
     context.fn(...args);
 }
 
-const obj = {name: "Saurav", age: 12};
+const obj = { name: "Saurav", age: 12 };
 function printDetails() {
     console.log(this.name + " with age " + this.age)
 }

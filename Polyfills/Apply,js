@@ -11,7 +11,7 @@ Function.prototype.myApply = function (context = {}, args = []) {
     context.fn(...args)
 }
 
-let obj = {name:"Saurav", age: 42}
+let obj = { name: "Saurav", age: 42 }
 function printDetails(anotherName, anotherAge) {
     console.log(this.name + " " + this.age + " With " + anotherName + " " + anotherAge);
 }

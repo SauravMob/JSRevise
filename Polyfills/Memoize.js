@@ -19,10 +19,10 @@ function myMemoize(fn, context) {
 const memoizedProduct = myMemoize(clumsySquare)
 
 console.time("First");
-console.log(memoizedProduct(9243,2324));
+console.log(memoizedProduct(9243, 2324));
 console.timeEnd("First");
 
 
 console.time("Second");
-console.log(memoizedProduct(9243,2324));
+console.log(memoizedProduct(9243, 2324));
 console.timeEnd("Second");
